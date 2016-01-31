@@ -29,25 +29,12 @@
                             <label for="name">What is your name?</label>
                             <input type="name" class="form-control" id="f_name_input" placeholder="enter your name">
                         </div>
-                    <a class="btn btn-default" onClick="_firstForm();">Submit</a>
+                    <a href="#" class="btn btn-default btn-name" onClick="_firstForm();">Submit</a>
                     </form>  
             </div>
         
 
         </div>
-
-        <di id="form2" class="container hidden">
-            <form name="s2Form" id="first_form">
-                <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="fav_program_input" placeholder="What's your favorite programming language?">
-                </div>
-                <button type="submit" class="btn btn-default" onClick="_firstForm();">Submit</button>
-            </form>
-        </div>
-
-
-       
 
         <div id="form1_response" class="container hidden">
             <div class="col-sm-12 text-center header">
@@ -59,12 +46,26 @@
                 <a id="start_story_link" href="#" onClick="startStory();" class="btn btn-default hidden animated bounceInUp">Click to Begin</a>
             </div>
             <div class="col-sm-12 text-center">
-                <div id="start_story_div"></div>
+                <div id="start_story_div" class="hidden animated bounceInUp"></div>
+            </div>
+        </div>
+
+        <div id="form2" class="container hidden animated bounceInUp">
+            <div class="col-sm-12 text-center">
+                <form name="s2Form" id="first_form">
+                <div class="form-group">
+                    <div class="radio">
+                      <label class="radio-inline"><input id="repub" type="radio" name="rebellion" value="republic">Republic</label>
+                      <label class="radio-inline"><input id="rebel" type="radio" name="rebellion" value="rebellion">Rebellion</label>
+                      <label class="radio-inline"><a href="#" class="btn btn-default" onClick="_chooseSide();">Submit</a></label>
+                    </div>
+                <!-- <input type="password" class="form-control" id="fav_program_input" placeholder="What's your favorite programming language?"> -->
+                </div>
+            </form>
             </div>
         </div>
 
         
-
 
 
 

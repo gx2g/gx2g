@@ -1,58 +1,46 @@
 // JavaScript Document
-
-
+ 
 window.onload = function(){ 
 
 	$('pre code').each(function(i, block) {
     	hljs.highlightBlock(block);
     });
 
+	// my 1st function hides button shows other div
 	startQuestions = function(){
 		$('#formBtn').addClass('hidden');
 		$('#form1').removeClass('hidden');
 	};
 
+	// 2nd function hides field container removes response hidden
 	_firstForm = function(){
 		$('#form1_response').removeClass('hidden');
 		$('#form1').addClass('hidden');
+
+		// create a var = to id name and grab value
 		var _name1 = document.getElementById('f_name_input').value;
+		// find id and print value plus add message
 		document.getElementById('fName').innerHTML = "Welcome " + '<b>' + _name1 + '</b>' + " tell us your story?";
+		// find id and put string inside
+		document.getElementById('tag_line').innerHTML = "Capture data and store it to a variable. print it on the page telling a story using JavaScript example by Robert Resendez.";
+		$('#start_story_link').removeClass('hidden');
 	};
 
+	startStory = function(){
+		$('#tag_line').addClass('hidden');
+		$('#form2').removeClass('hidden');
+		$('#start_story_link').addClass('hidden');
+		$('#start_story_div').removeClass('hidden');
 
-	// startQuestions = function(){
-	// 	firstName = prompt("What is your nick name?");
-	// 	document.getElementById("fName").innerHTML = "Welcome " + '<b>' + firstName + '</b>' + " tell us your story?";
-	// 	jQuery('#start_questions').addClass('hidden');
-	// 	$("#tag_line").removeClass("hidden");
-	// 	document.getElementById("tag_line").innerHTML = "Capture data and store it to a variable. print it on the page telling a story using JavaScript example by Robert Resendez.";
-	// };
+		_name1 = document.getElementById('f_name_input').value;
+		var fav_pro_case = _name1.toUpperCase();
+		var end_1st_sentence = " who had concoured the land in search for a new talent to join his relentless campaign to distroy the "
+		document.getElementById('start_story_div').innerHTML = "Once a apon a time in a far far away land there was a hero by the name of " + '<b>' + fav_pro_case + '</b>' + end_1st_sentence;
+	};
+
+	_chooseSide = function(){
+		var _chooseSides = document.querySelector('input[name="rebellion"]:checked').value;
+		alert(_chooseSides);
+	};
 
 };
-    // Prompt Boxes to ask questions
-	// var firstName = prompt("What is your Name?");
-	// var favProgram = prompt("What\s your favorite coding program?");
-
-	// // Variables that store the data and show a little concatenation :)
-	// var fav_pro_case = '<b>' + favProgram.toUpperCase() + '</b>';
-	// var _firstS = " in a far far away land there was a person by the name of  " + '<b>' + firstName + '</b>' + " who was viewing my javascript work,";
-	// var _secS = " and it so happens that " + '<b>' + firstName + '</b>' + " also happens to love " + fav_pro_case;
-	// var story_bg_color = "#b18150";
-
-	// // setTimeout function to make the first prompt box delay
-	// setTimeout(function() {
-	// 	document.getElementById("fName").innerHTML = "Welcome " + '<b>' + firstName + '</b>' + " tell us your story?";
-	// 	$("#tag_line").removeClass("hidden");
-	// 	$("#start_story_link").removeClass("hidden");
-	// 	document.getElementById("tag_line").innerHTML = "Capture data and store it to a variable. print it on the page telling a story using JavaScript example by Robert Resendez.";
-	// },1250);
-
- 	//  var startQuestions = function(){
-	// 	firstName = prompt("What is your nick name?");
-	// 	document.getElementById("print_questions").innerHTML = "Welcome " + '<b>' + firstName + '</b>' + " tell us your story?";
-	// };
-
-	// var startStory = function(){
-	// 	document.getElementById("start_story_div").innerHTML = "Once apon a time " + _firstS + _secS;
-	// 	$("#start_story_div").css("background-color", story_bg_color);
-	// };

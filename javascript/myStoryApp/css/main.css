@@ -24,6 +24,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', e
 #form1 label {color:#fff; font-size:17px;}
 #form1 input {height:50px; min-width:300px;}
 #form1 button {height:50px;}
+#form1 .btn-name {height:50px; line-height: 37px;}
+
+
 .thank-you {
 	color:#fff;
 }
@@ -56,9 +59,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', e
 }
 #start_story_div {
 	color:#fff;
-	font-size:17px;
+	font-size:25px;
 	margin:20px 0px 20px 0px;
 	padding:20px;
+	background-color:#000;
 }
 #start_story_div b {
 	color:#facb6f;
