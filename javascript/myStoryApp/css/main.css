@@ -11,15 +11,28 @@ body{
 	background:none;
 }
 
-.header {
-	margin-top:20px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.4+0,0.4+100 */
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+#form1 {padding:20px 0px; border:1px #facb6f solid;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.3+0,0.3+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#4d000000',GradientType=0 ); /* IE6-9 */
+
+
 }
-#fName {
+#form1 label {color:#fff; font-size:17px;}
+#form1 input {height:50px; min-width:300px;}
+#form1 button {height:50px;}
+.thank-you {
+	color:#fff;
+}
+
+#form1_response, #key, #form1{
+	margin-top:180px;
+}
+
+#print_questions, #fName {
 	font-size:35px; 
 	color:#fff;
 	margin:20px 0px 0px 0px; 
@@ -28,7 +41,9 @@ body{
 
 #tag_line {
 	font-size:12px; 
-	color:#cc0000;
+	color:#fff;
+	background-color:#000;
+	border:1px #facb6f solid;
 }
 
 #_first {
@@ -37,7 +52,7 @@ body{
 }
 
 #fName b, #_first b {
-	color:#00FFFF;
+	color:#facb6f;
 }
 #start_story_div {
 	color:#fff;
@@ -46,5 +61,5 @@ body{
 	padding:20px;
 }
 #start_story_div b {
-	color:#00FFFF;
+	color:#facb6f;
 }

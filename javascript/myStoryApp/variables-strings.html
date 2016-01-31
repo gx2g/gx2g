@@ -5,26 +5,103 @@
 <title>Bootstrap Story App</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/styles/zenburn.css">
+<link rel="stylesheet" href="css/animate.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
 </head>
 
 <body>
 	<div class="container-fuild bg-image">
-        <div class="container">
+
+        <div id="formBtn" class="container">
+            <div id="key" class="col-sm-12 text-center">
+                <a id="start_questions" href="#" onClick="startQuestions();" class="btn btn-default btn-lg animated fadeIn">Answer Some Questions</a>
+            </div>
+        </div>
+
+        <div id="form1" class="container animated bounceInUp hidden">
+                <div class="col-sm-12 text-center">
+                    <form name="f1Form" id="first_form" class="form-inline">
+                        <div class="form-group">
+                            <label for="name">What is your name?</label>
+                            <input type="name" class="form-control" id="f_name_input" placeholder="enter your name">
+                        </div>
+                    <a class="btn btn-default" onClick="_firstForm();">Submit</a>
+                    </form>  
+            </div>
+        
+
+        </div>
+
+        <di id="form2" class="container hidden">
+            <form name="s2Form" id="first_form">
+                <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="fav_program_input" placeholder="What's your favorite programming language?">
+                </div>
+                <button type="submit" class="btn btn-default" onClick="_firstForm();">Submit</button>
+            </form>
+        </div>
+
+
+       
+
+        <div id="form1_response" class="container hidden">
             <div class="col-sm-12 text-center header">
-            	<h1 id="fName"></h1>
-            	<h2 id="tag_line" class="alert alert-info hidden" role="alert"></h2>
+            	<h1 id="fName" class="animated bounceInUp"></h1>
+            	<h2 id="tag_line" class="alert alert-info animated bounceInUp" role="alert"></h2>
             </div>
             <div class="col-sm-12 text-center">
                 <div id="_first"><b></b></div>
-                <a id="start_story_link" href="#" onClick="startStory();" class="btn btn-default hidden">Click to Begin</a>
+                <a id="start_story_link" href="#" onClick="startStory();" class="btn btn-default hidden animated bounceInUp">Click to Begin</a>
             </div>
             <div class="col-sm-12 text-center">
                 <div id="start_story_div"></div>
             </div>
         </div>
+
+        
+
+
+
+
+        <div id="code_example" class="container hidden">
+            <div class="col-sm-12 text-center thank-you">
+                <p>Thank you for viewing my variables and strings javascript example. Here I show you how I use {var} to store data submitted by the user. Then display it on a simple delay beginning the story with a button click</p>
+            </div>
+            <div class="col-sm-12 text-left">
+            <pre>
+            <code> 
+
+window.onload = function(){ 
+
+    $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+
+    var firstName = null;
+    var favProgram = null;
+
+    startQuestions = function(){
+        firstName = prompt("What is your nick name?");
+        document.getElementById("fName").innerHTML = "Welcome " + '<b>' + firstName + '</b>' + " tell us your story?";
+        jQuery('#start_questions').addClass('hidden');
+        $("#tag_line").removeClass("hidden");
+        document.getElementById("tag_line").innerHTML = "Capture data and store it to a variable. print it on the page telling a story using JavaScript example by Robert Resendez.";
+    };
+
+};
+            </code>
+            </pre>
+            
+            </div>
+        </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 	<script src="js/story-app.js"></script>
 </body>
 </html>
