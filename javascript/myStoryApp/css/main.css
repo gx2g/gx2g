@@ -28,9 +28,7 @@ body{
 
 #tag_line {
 	font-size:12px; 
-	color:#fff;
-	margin:0;
-	padding:0;
+	color:#cc0000;
 }
 
 #_first {
@@ -39,5 +37,14 @@ body{
 }
 
 #fName b, #_first b {
+	color:#00FFFF;
+}
+#start_story_div {
+	color:#fff;
+	font-size:17px;
+	margin:20px 0px 20px 0px;
+	padding:20px;
+}
+#start_story_div b {
 	color:#00FFFF;
 }

@@ -12,12 +12,15 @@
         <div class="container">
             <div class="col-sm-12 text-center header">
             	<h1 id="fName"></h1>
-            	<h2 id="tag_line"></h2>
+            	<h2 id="tag_line" class="alert alert-info hidden" role="alert"></h2>
             </div>
             <div class="col-sm-12 text-center">
-             <div id="_first"><b></b></div>
+                <div id="_first"><b></b></div>
+                <a id="start_story_link" href="#" onClick="startStory();" class="btn btn-default hidden">Click to Begin</a>
             </div>
-            
+            <div class="col-sm-12 text-center">
+                <div id="start_story_div"></div>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
