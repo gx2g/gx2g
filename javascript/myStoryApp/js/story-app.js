@@ -34,13 +34,24 @@ window.onload = function(){
 
 		_name1 = document.getElementById('f_name_input').value;
 		var fav_pro_case = _name1.toUpperCase();
-		var end_1st_sentence = " who had concoured the land in search for a new talent to join his relentless campaign to distroy the "
-		document.getElementById('start_story_div').innerHTML = "Once a apon a time in a far far away land there was a hero by the name of " + '<b>' + fav_pro_case + '</b>' + end_1st_sentence;
+		var begin_sentence = "Once a apon a time in a far far away land there was a hero by the name of ";
+		var end_1st_sentence = " who had concoured the land in search for a new talent to join his relentless campaign to distroy the ";
+		document.getElementById('start_story_div').innerHTML = begin_sentence + '<b>' + fav_pro_case + '</b>' + end_1st_sentence;
 	};
 
-	_chooseSide = function(){
-		var _chooseSides = document.querySelector('input[name="rebellion"]:checked').value;
-		alert(_chooseSides);
+	 _chooseSide = function(){
+
+	        $("input[name=darkSide]").change(function(){          
+	        var choose_sentence = "You have chosen the ";
+
+	            if ($(this).val() == "republic") {
+		            document.getElementById("start_story_div").innerHTML = choose_sentence + " Join the Dark Side of the Force!";
+	            }
+	            else {
+	    	        document.getElementById("start_story_div").innerHTML =  choose_sentence + "to train with the Jedi Rebellion!";
+	            }                                                            
+	       });
 	};
 
+		// document.getElementById('start_story_div').innerHTML = begin_sentence + '<b>' + fav_pro_case + '</b>' + end_1st_sentence;
 };
