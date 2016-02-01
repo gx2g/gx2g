@@ -24,9 +24,9 @@
 
         <div id="form1" class="container animated bounceInUp hidden">
                 <div class="col-sm-12 text-center">
+                    <center><label for="name">What is your name?</label></center>
                     <form name="f1Form" id="first_form" class="form-inline">
                         <div class="form-group">
-                            <label for="name">What is your name?</label>
                             <input type="name" class="form-control" id="f_name_input" placeholder="enter your name">
                         </div>
                     <a href="#" class="btn btn-default btn-name" onClick="_firstForm();">Submit</a>
@@ -37,9 +37,11 @@
         </div>
 
         <div id="form1_response" class="container hidden">
-            <div class="col-sm-12 text-center header">
-            	<h1 id="fName" class="animated bounceInUp"></h1>
-            	<h2 id="tag_line" class="alert alert-info animated bounceInUp" role="alert"></h2>
+            <div class="row">
+                <div class="col-sm-12 text-center header">
+                    <h1 id="fName" class="animated bounceInUp"></h1>
+                    <h2 id="tag_line" class="alert alert-info animated bounceInUp" role="alert"></h2>
+                </div>
             </div>
             <div class="col-sm-12 text-center">
                 <div id="_first"><b></b></div>
@@ -52,15 +54,20 @@
 
         <div id="form2" class="container hidden animated bounceInUp">
             <div class="col-sm-12 text-center">
+
+            <div class="row">
                 <form name="s2Form" id="first_form">
-                <div class="form-group">
-                    <div class="radio">
-                      <label class="radio-inline"><input id="repub" type="radio" name="darkSide" value="republic" onClick="_chooseSide();">Republic</label>
-                      <label class="radio-inline"><input id="rebel" type="radio" name="darkSide" value="rebellion" onClick="_chooseSide();">Rebellion</label>
+                    <div class="form-group form-inline">
+                        <div class="radio col-sm-6">
+                          <label class="radio-inline repub-radio"><input id="repub" type="radio" name="darkSide" value="republic" onClick="_chooseSide();">Republic</label>
+                        </div>
+                        <div class="radio col-sm-6">
+                             <label class="radio-inline rebell-radio"><input id="rebel" type="radio" name="darkSide" value="rebellion" onClick="_chooseSide();">Rebellion</label>
+                        </div>
                     </div>
-                <!-- <input type="password" class="form-control" id="fav_program_input" placeholder="What's your favorite programming language?"> -->
-                </div>
-            </form>
+                </form>
+            </div>
+
             </div>
         </div>
 
