@@ -1,15 +1,18 @@
 @charset "UTF-8";
 /* CSS Document */
-html{
-	background:url(../images/bg.jpg) no-repeat center center;
-	min-height:100%;
-	background-size:cover;
+/*html {
+	position: relative; 
+	height:100%; 
+	min-height:100%; 
+	margin:0; 
+	padding:0;
 }
 
 body{
+	background:url(../images/bg.jpg) no-repeat center center;
 	min-height:100%;
-	background:none;
-}
+	background-size:cover;
+}*/
 
 #form1 {padding:20px 0px;
 

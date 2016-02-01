@@ -1,5 +1,5 @@
 // JavaScript Document
- 
+
 window.onload = function(){ 
 
 	$('pre code').each(function(i, block) {
@@ -34,8 +34,8 @@ window.onload = function(){
 
 		_name1 = document.getElementById('f_name_input').value;
 		var fav_pro_case = _name1.toUpperCase();
-		var begin_sentence = "Once a apon a time in a far far away land there was a hero by the name of ";
-		var end_1st_sentence = " who had concoured the land in search for a new talent to join his relentless campaign to distroy the ";
+		var begin_sentence = "Once a apon a time in a land far far away there lived a hero by the name of ";
+		var end_1st_sentence = " who had conquered the land in search for a new talent to join his relentless campaign to destory the ";
 		document.getElementById('start_story_div').innerHTML = begin_sentence + '<b>' + fav_pro_case + '</b>' + end_1st_sentence;
 	};
 
@@ -45,10 +45,10 @@ window.onload = function(){
 	        var choose_sentence = "You have chosen the ";
 
 	            if ($(this).val() == "republic") {
-		            document.getElementById("start_story_div").innerHTML = choose_sentence + " Join the Dark Side of the Force!";
+		            document.getElementById("start_story_div").innerHTML = choose_sentence + " to train with the Jedi Rebellion!";
 	            }
 	            else {
-	    	        document.getElementById("start_story_div").innerHTML =  choose_sentence + "to train with the Jedi Rebellion!";
+	    	        document.getElementById("start_story_div").innerHTML =  choose_sentence + " Join the Dark Side of the Force!";
 	            }                                                            
 	       });
 	};
