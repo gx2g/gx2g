@@ -52,6 +52,25 @@ window.onload = function(){
 	            }                                                            
 	       });
 	};
-
-		// document.getElementById('start_story_div').innerHTML = begin_sentence + '<b>' + fav_pro_case + '</b>' + end_1st_sentence;
 };
+
+
+$().ready(function() {
+    // validate the form when it is submitted
+    var validator = $("#first_form").validate({
+        errorPlacement: function(error, element) {
+            // Append error within linked label
+            $( element )
+                .closest( "form" )
+                    .find( "label[for='" + element.attr( "id" ) + "']" )
+                        .append( error );
+        },
+        errorElement: "span",
+        messages: {
+            user: {
+                required: " (required)",
+                minlength: "(4 characters or more)"
+            },
+        }
+    });
+});

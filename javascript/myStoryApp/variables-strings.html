@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/animate.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
 
 </head>
 
@@ -18,19 +19,28 @@
 
         <div id="formBtn" class="container">
             <div id="key" class="col-sm-12 text-center">
-                <a id="start_questions" href="#" onClick="javascript:startQuestions();" class="btn btn-default btn-lg animated fadeIn">Answer Some Questions</a>
+                <a id="start_questions" href="#" onClick="javascript:startQuestions();" class="animated fadeIn">
+                    <span class="join-the-force-text btn btn-default btn-lg animated bounceIn">Join the Force!</span>
+                </a>
             </div>
         </div>
 
-        <div id="form1" class="container animated bounceInUp hidden">
+        <div id="form1" class="container animated bounceIn hidden">
                 <div class="col-sm-12 text-center">
-                    <center><label for="name">What is your name?</label></center>
-                    <form name="f1Form" id="first_form" class="form-inline">
-                        <div class="form-group">
-                            <input type="name" class="form-control" id="f_name_input" placeholder="enter your name">
-                        </div>
-                    <a href="#" class="btn btn-default btn-name" onClick="javascript:_firstForm();">Submit</a>
-                    </form>  
+
+
+                    <form method="get" class="cmxform" id="first_form" action="javascript:_firstForm();">
+                        <fieldset>
+                            <p>
+                                <label for="f_name_input">Username</label>
+                                <input id="f_name_input" name="user" required minlength="4">
+                            </p>
+                            <p>
+                                <input class="submit" type="submit">
+                            </p>
+                        </fieldset>
+                    </form>
+
             </div>
         
 
@@ -39,30 +49,34 @@
         <div id="form1_response" class="container hidden">
             <div class="row">
                 <div class="col-sm-12 text-center header">
-                    <h1 id="fName" class="animated bounceInUp"></h1>
-                    <h2 id="tag_line" class="alert alert-info animated bounceInUp" role="alert"></h2>
+                    <h1 id="fName" class="animated bounceIn"></h1>
+                    <h2 id="tag_line" class="alert alert-info animated bounceIn" role="alert"></h2>
                 </div>
             </div>
             <div class="col-sm-12 text-center">
                 <div id="_first"><b></b></div>
-                <a id="start_story_link" href="#" onClick="javascript:startStory();" class="btn btn-default hidden animated bounceInUp">Click to Begin</a>
+                <a id="start_story_link" href="#" onClick="javascript:startStory();" class="btn btn-default hidden animated bounceIn">Click to Begin</a>
             </div>
             <div class="col-sm-12 text-center">
-                <div id="start_story_div" class="hidden animated bounceInUp"></div>
+                <div id="start_story_div" class="hidden animated bounceIn"></div>
             </div>
         </div>
 
-        <div id="form2" class="container hidden animated bounceInUp">
+        <div id="form2" class="container hidden animated bounceIn">
             <div class="col-sm-12 text-center">
 
             <div class="row">
-                <form name="s2Form" id="first_form">
+                <form name="s2Form" id="first_form" data-toggle="validator">
                     <div class="form-group form-inline">
                         <div class="radio col-sm-6">
-                          <label class="radio-inline repub-radio"><input id="repub" type="radio" name="darkSide" value="republic" onClick="_chooseSide();">Republic</label>
+                          <label class="radio-inline repub-radio">
+                          <input id="repub" type="radio" name="darkSide" value="republic" onClick="_chooseSide();">Republic</label>
+                          <div class="help-block with-errors"></div>
                         </div>
                         <div class="radio col-sm-6">
-                             <label class="radio-inline rebell-radio"><input id="rebel" type="radio" name="darkSide" value="rebellion" onClick="_chooseSide();">Rebellion</label>
+                             <label class="radio-inline rebell-radio">
+                             <input id="rebel" type="radio" name="darkSide" value="rebellion" onClick="_chooseSide();">Rebellion</label>
+                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
                 </form>

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-/*html {
+html {
 	position: relative; 
 	height:100%; 
 	min-height:100%; 
@@ -9,10 +9,7 @@
 }
 
 body{
-	background:url(../images/bg.jpg) no-repeat center center;
-	min-height:100%;
-	background-size:cover;
-}*/
+}
 
 #form1 {padding:20px 0px;
 
@@ -90,3 +87,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 #start_story_div b {
 	color:#facb6f;
 }
+
+#start_questions {
+	margin:0; 
+	padding:0; 
+	width:340px; 
+	height:600px; 
+	display:inline-block; 
+	background: url('../images/chabacca.png') -25px 0px;
+	background-repeat: no-repeat;
+}
+
+#start_questions .join-the-force-text {margin-top:310px;}
+
+
+
+
+
+
+
+
+
+
+
