@@ -40,10 +40,8 @@ window.onload = function(){
 	};
 
 	 _chooseSide = function(){
-
 	        $("input[name=darkSide]").change(function(){          
-	        var choose_sentence = "You have chosen the ";
-
+	        	var choose_sentence = "You have chosen the ";
 	            if ($(this).val() == "republic") {
 		            document.getElementById("start_story_div").innerHTML = choose_sentence + " to train with the Jedi Rebellion!";
 	            }

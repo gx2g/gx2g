@@ -79,10 +79,11 @@
 				$this.css('background-position', positionValue);
 			}, 1);
 		}
-	}
+	};
 	$.fn.backgroundScroll.defaults = {
 		directionX: 'right',
 		directionY: 'bottom',
-		speed: [0.8]
+		speed: [0.8],
+		click: 'stop',
 	};
 })(jQuery);
